@@ -1,0 +1,1 @@
+# ngx-easy-table-democheckbox
