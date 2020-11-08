@@ -1,0 +1,30 @@
+  
+<ngx-table
+[configuration]="configuration"
+[data]="data"
+[columns]="columns"
+
+(event)="eventEmitted($event)"
+>
+<ng-template let-row let-index="index">
+  <td>
+    <div class="form-group">
+      <label class="form-checkbox">
+        <input type="checkbox" [checked]="row.isSelected"  (change)="onChange(row,index)" />
+        <i class="form-icon"></i>
+      </label>
+    </div>
+  </td>
+  <td>
+    <h5 class="color-green font-light">{{ row.name }}</h5>
+  </td>
+  <td>
+    <div class="font-small">Company: {{ row.company }}</div>
+  </td>
+          <h5 class="color-green font-light">{{ row.Cname }}</h5>
+  <td>
+    <span class="font-small display-block">Phone:</span>
+    <span class="font-small">{{ row.phone }}</span>
+  </td>
+</ng-template>
+</ngx-table>
